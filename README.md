@@ -39,9 +39,21 @@ https://github.com/enricocid/Music-Player-GO
 The only problem is, that its UI is obviously not optimized for wear os, but its not far from it.
 I took only very few hours and removed / reordered a few UI components.
 
+All changes can be found in the commit log:
+https://github.com/frozen1c3/Music-Player-GO-WearOS/commits/main
+
 Maybe someone else finds it useful as well, so here it is.
 
 How to use:
 - Download the apk from release (its actually only the debug apk and not a proper release)
 - Sideload it to your watch using adb. For sideloading from Android, i recommend GeminiMan
 - Transfer music to your phone using LocalSend - also required to be sideloaded via adb: https://f-droid.org/de/packages/org.localsend.localsend_app/
+
+How to build (for non Android/Wear OS developers):
+- Download Android Studio
+- Clone the sources
+- Open the subdirectory 'project/' in Android Studio
+- Open the terminal IN Android studio and insert 'gradle clean build'
+- Send the command with Ctrl+Enter
+- Find the result in \project\app\build\outputs\apk\debug
+
