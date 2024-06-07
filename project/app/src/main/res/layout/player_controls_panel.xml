@@ -98,14 +98,5 @@
                 android:padding="8dp" />
         </LinearLayout>
 
-        <com.google.android.material.tabs.TabLayout
-            android:id="@+id/tab_layout"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:backgroundTint="?attr/main_bg"
-            app:tabGravity="center"
-            app:tabIndicator="@drawable/tab_indicator"
-            app:tabMode="scrollable"
-            app:tabRippleColor="?attr/colorPrimary" />
     </LinearLayout>
 </merge>

@@ -372,59 +372,8 @@ class MainActivity : BaseActivity(), UIControlInterface, MediaControlInterface {
             reduceDragSensitivity()
         }
 
-        initTabLayout()
     }
 
-    private fun initTabLayout() {
-
-        fun closeDetails() {
-            if (sAllowCommit && sDetailsFragmentExpanded) {
-                supportFragmentManager.goBackFromFragmentNow(mDetailsFragment)
-            }
-        }
-
-        val accent = Theming.resolveThemeColor(resources)
-        val alphaAccentColor = ColorUtils.setAlphaComponent(accent, 200)
-
-        with(mPlayerControlsPanelBinding.tabLayout) {
-
-            tabIconTint = ColorStateList.valueOf(alphaAccentColor)
-
-            TabLayoutMediator(this, mMainActivityBinding.viewPager2) { tab, position ->
-                val selectedTab = mGoPreferences.activeTabs.toList()[position]
-                tab.setIcon(Theming.getTabIcon(selectedTab))
-                tab.setContentDescription(Theming.getTabAccessibilityText(selectedTab))
-            }.attach()
-
-            addOnTabSelectedListener(object : TabLayout.OnTabSelectedListener {
-                override fun onTabSelected(tab: TabLayout.Tab) {
-                    tab.icon?.setTint(accent)
-                }
-
-                override fun onTabUnselected(tab: TabLayout.Tab) {
-                    closeDetails()
-                    tab.icon?.setTint(alphaAccentColor)
-                }
-
-                override fun onTabReselected(tab: TabLayout.Tab) {
-                    closeDetails()
-                }
-            })
-        }
-
-        mMainActivityBinding.viewPager2.setCurrentItem(
-            when {
-                mTabToRestore != -1 -> mTabToRestore
-                else -> 0
-            },
-            false
-        )
-
-        mPlayerControlsPanelBinding.tabLayout.getTabAt(mMainActivityBinding.viewPager2.currentItem)?.run {
-            select()
-            icon?.setTint(Theming.resolveThemeColor(resources))
-        }
-    }
 
     private fun initFragmentAt(position: Int): Fragment {
         when (mGoPreferences.activeTabs.toList()[position]) {
