@@ -44,6 +44,8 @@ How to install:
 - Sideload it to your watch using adb. For sideloading from Android i recommend GeminiMan)
 
 
+The following content of the readme is unchanged from the original!
+
 <p align="center">
   <!-- Latest Release -->
     <a href="https://github.com/enricocid/Music-Player-GO/releases">
