@@ -9,19 +9,6 @@
         android:layout_height="match_parent"
         android:orientation="vertical">
 
-        <com.google.android.material.appbar.MaterialToolbar
-            android:id="@+id/search_toolbar"
-            android:layout_width="match_parent"
-            android:layout_height="?attr/actionBarSize"
-            android:background="?attr/toolbar_bg"
-            android:elevation="@dimen/search_bar_elevation"
-            android:theme="@style/ToolbarStyle"
-            app:collapseIcon="@drawable/ic_navigate_before"
-            app:navigationIcon="@drawable/ic_close"
-            app:title="@string/songs"
-            app:titleTextAppearance="@style/ToolbarStyle.Title"
-            app:titleTextColor="?android:attr/textColorPrimary" />
-
         <!-- MUSIC LIST -->
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/all_music_rv"

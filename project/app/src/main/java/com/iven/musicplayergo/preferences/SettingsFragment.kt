@@ -60,20 +60,6 @@ class SettingsFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        _fragmentSettingsBinding?.searchToolbar?.run {
-            inflateMenu(R.menu.menu_settings)
-            setNavigationOnClickListener {
-                mUIControlInterface.onCloseActivity()
-            }
-            setOnMenuItemClickListener {
-                when (it.itemId) {
-                    R.id.github_page -> openGitHubPage()
-                    R.id.locale_switcher -> openLocaleSwitcher()
-                }
-                return@setOnMenuItemClickListener true
-            }
-        }
-
         mPreferencesFragment = PreferencesFragment.newInstance()
         mPreferencesFragment?.let { fm ->
             childFragmentManager.commit {

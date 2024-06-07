@@ -122,32 +122,6 @@ class AllMusicFragment : Fragment(), SearchView.OnQueryTextListener {
                     GoConstants.ARTIST_VIEW
                 )
             }
-
-            searchToolbar.let { stb ->
-
-                stb.inflateMenu(R.menu.menu_music_search)
-                stb.overflowIcon = ContextCompat.getDrawable(requireContext(), R.drawable.ic_sort)
-                stb.setNavigationOnClickListener {
-                    mUIControlInterface.onCloseActivity()
-                }
-
-                with(stb.menu) {
-
-                    mSortMenuItem = Lists.getSelectedSortingForMusic(mSorting, this).apply {
-                        setTitleColor(Theming.resolveThemeColor(resources))
-                    }
-
-                    with (findItem(R.id.action_search).actionView as SearchView) {
-                        setOnQueryTextListener(this@AllMusicFragment)
-                        setOnQueryTextFocusChangeListener { _, hasFocus ->
-                            stb.menu.setGroupVisible(R.id.sorting, !hasFocus)
-                            stb.menu.findItem(R.id.sleeptimer).isVisible = !hasFocus
-                        }
-                    }
-
-                    setMenuOnItemClickListener(stb.menu)
-                }
-            }
         }
 
         tintSleepTimerIcon(enabled = MediaPlayerHolder.getInstance().isSleepTimer)

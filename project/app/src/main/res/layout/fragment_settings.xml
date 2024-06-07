@@ -5,20 +5,6 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
-    <com.google.android.material.appbar.MaterialToolbar
-        android:id="@+id/search_toolbar"
-        android:layout_width="match_parent"
-        android:layout_height="?attr/actionBarSize"
-        android:background="?attr/toolbar_bg"
-        android:elevation="@dimen/search_bar_elevation"
-        android:theme="@style/ToolbarStyle"
-        app:navigationIcon="@drawable/ic_close"
-        app:subtitle="@string/versionName"
-        app:subtitleTextAppearance="@style/ToolbarStyle.Subtitle"
-        app:title="@string/settings"
-        app:titleTextAppearance="@style/ToolbarStyle.Title"
-        app:titleTextColor="?android:attr/textColorPrimary" />
-
     <FrameLayout
         android:id="@+id/fragment_layout"
         android:layout_width="match_parent"
