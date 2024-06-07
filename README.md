@@ -42,6 +42,7 @@ Maybe someone else finds it useful as well, so here it is.
 - Download the apk from release (its actually only the debug apk and not a proper release)
 - Sideload it to your watch using adb. For sideloading from Android, i recommend GeminiMan: https://play.google.com/store/apps/details?id=com.geminiman.wearosmanager&hl=en_US
 - Transfer music to your phone using LocalSend - also required to be sideloaded via adb: https://f-droid.org/de/packages/org.localsend.localsend_app/
+- Manage your music files (sideload via adb): https://f-droid.org/de/packages/com.martinmimigames.simplefileexplorer/
 
 # How to build (for non Android/Wear OS developers)
 - Download Android Studio: https://developer.android.com/studio
