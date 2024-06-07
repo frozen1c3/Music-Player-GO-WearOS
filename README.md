@@ -6,29 +6,23 @@
 
 Forked from: https://github.com/enricocid/Music-Player-GO
 
-# Fork details on Wear OS optimization
+# Disclaimer: This is a quick and dirty solution - works for me - might work for you
 
-! Disclaimer: This is a quick and dirty solution, but it works for me and given the little time i had, its more than nothing. !
+# The problem
 
-Current situation:
+As of now, there seems to be no reasonably good music player for playing mp3 offline from local storage on Wear OS.
 
-As of now, there seems to be no reasonably good music player for playing mp3 offline from local storage.
+Samsung music cons:
+- Only synchronizes up to 2 GB
+- Can not play folders
+- Requires playlists using Samsung Music
 
-Samsung music:
+WearMedia cons:
+- The only option on play store for now
+- The main app on android asks for permission to share my data with tons of providers -> loosing trust
+- Sometimes fails to play in the middle of a track. Important when using long titles to continue listening
 
-    Only synchronizes up to 2 GB
-
-    Can not play folders
-
-WearMedia:
-
-    The only option on play store for now
-
-    The main app on android asks for permission to share my data with tons of providers -> loosing trust
-
-    Sometimes fails to play in the middle of a track. Important when using long titles to continue listening
-
-My attempt:
+# My attempt to solve
 
 See what standard android app i can sideload and maybe modify a bit.
 I dont need a beautiful UI for wear os, as long as it works.
@@ -44,12 +38,12 @@ https://github.com/frozen1c3/Music-Player-GO-WearOS/commits/main
 
 Maybe someone else finds it useful as well, so here it is.
 
-How to use:
+# How to use
 - Download the apk from release (its actually only the debug apk and not a proper release)
-- Sideload it to your watch using adb. For sideloading from Android, i recommend GeminiMan
+- Sideload it to your watch using adb. For sideloading from Android, i recommend GeminiMan: https://play.google.com/store/apps/details?id=com.geminiman.wearosmanager&hl=en_US
 - Transfer music to your phone using LocalSend - also required to be sideloaded via adb: https://f-droid.org/de/packages/org.localsend.localsend_app/
 
-How to build (for non Android/Wear OS developers):
+# How to build (for non Android/Wear OS developers)
 - Download Android Studio
 - Clone the sources
 - Open the subdirectory 'project/' in Android Studio
