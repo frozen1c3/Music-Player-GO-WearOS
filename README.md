@@ -2,11 +2,47 @@
 <img width="128" src="https://github.com/enricocid/Music-Player-GO/blob/main/fastlane/metadata/android/en-US/images/icon.png">
 </p>
 
-<h1 align="center">Music Player GO ( Wear OS optimized )</h1>
+<h1 align="center">Music Player GO - FORK ( Wear OS optimized )</h1>
 
-<p align="center">
-<img width="400" src="art16.gif">
-</p>
+# Fork details on Wear OS optimization
+
+! Disclaimer: This is a quick and dirty solution, but it works for me and given the little time i had, its more than nothing. !
+
+Current situation:
+
+As of now, there seems to be no reasonably good music player for playing mp3 offline from local storage.
+
+Samsung music:
+
+    Only synchronizes up to 2 GB
+
+    Can not play folders
+
+WearMedia:
+
+    The only option on play store for now
+
+    The main app on android asks for permission to share my data with tons of providers -> loosing trust
+
+    Sometimes fails to play in the middle of a track. Important when using long titles to continue listening
+
+My attempt:
+
+See what standard android app i can sideload and maybe modify a bit.
+I dont need a beautiful UI for wear os, as long as it works.
+
+Only the following roughly came close:
+https://github.com/enricocid/Music-Player-GO
+
+The only problem is, that its UI is obviously not optimized for wear os, but its not far from it.
+I took only very few hours and removed / reordered a few UI components.
+
+Maybe someone else finds it useful as well, so here it is.
+
+How to install:
+- Download the apk from release (its actually only the debug apk and not a proper release)
+- Sideload it to your watch using adb. For sideloading from Android i recommend GeminiMan)
+
 
 <p align="center">
   <!-- Latest Release -->
@@ -56,15 +92,6 @@
 # Description
 
 Welcome to **Music Player GO ( Wear OS optimized )**, your go-to local Android music player that strikes the perfect balance between simplicity and performance. Dive into a world where your music is organized intuitively, offering a minimal yet fully-featured experience!
-
-# Fork details
-
-As of now, there is no reasonably good music player for Wear OS (Samsungs has 2 GB sync limit and can not play folders).
-Music Player GO works on Wear OS out of the box, when sideloading the apk (ex. using GeminiMan).
-The only problem is, that its UI is obviously not optimized for wear os, but its not far from it.
-As i am just a random java developer, i decided to try to fork the existing app and remove, what i dont need on my watch.
-Maybe someone else finds it useful as well, so here it is.
-There are only the modified sources here, so rest (including the download links etc) are unmodified and link to the offical version.
 
 # Download
 
