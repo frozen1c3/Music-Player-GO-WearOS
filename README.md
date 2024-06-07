@@ -44,7 +44,7 @@ Maybe someone else finds it useful as well, so here it is.
 - Transfer music to your phone using LocalSend - also required to be sideloaded via adb: https://f-droid.org/de/packages/org.localsend.localsend_app/
 
 # How to build (for non Android/Wear OS developers)
-- Download Android Studio
+- Download Android Studio: https://developer.android.com/studio
 - Clone the sources
 - Open the subdirectory 'project/' in Android Studio
 - Open the terminal IN Android studio and insert 'gradle clean build'
