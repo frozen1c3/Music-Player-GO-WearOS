@@ -8,9 +8,6 @@
     android:orientation="vertical"
     tools:context=".ui.MainActivity">
 
-    <!-- the album's cover + actions -->
-    <include layout="@layout/now_playing_cover" />
-
     <!-- the SeekBar + seek value -->
     <SeekBar
         android:id="@+id/np_seek_bar"
@@ -50,6 +47,11 @@
             android:textAppearance="@style/TextAppearance.MaterialComponents.Caption"
             android:textColor="?android:attr/textColorSecondary" />
     </LinearLayout>
+
+    <include layout="@layout/now_playing_controls" />
+
+    <include layout="@layout/now_playing_vol_control" />
+
 
     <!-- the album's title -->
     <LinearLayout
@@ -106,8 +108,7 @@
             android:textColor="?android:attr/textColorTertiary" />
     </LinearLayout>
 
-    <include layout="@layout/now_playing_controls" />
-
-    <include layout="@layout/now_playing_vol_control" />
+    <!-- the album's cover + actions -->
+    <include layout="@layout/now_playing_cover" />
 
 </LinearLayout>
