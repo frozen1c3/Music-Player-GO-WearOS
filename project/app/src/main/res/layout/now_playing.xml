@@ -8,6 +8,8 @@
     android:orientation="vertical"
     tools:context=".ui.MainActivity">
 
+    <include layout="@layout/now_playing_controls" />
+
     <!-- the SeekBar + seek value -->
     <SeekBar
         android:id="@+id/np_seek_bar"
@@ -48,8 +50,6 @@
             android:textColor="?android:attr/textColorSecondary" />
     </LinearLayout>
 
-    <include layout="@layout/now_playing_controls" />
-
     <include layout="@layout/now_playing_vol_control" />
 
 
@@ -58,11 +58,11 @@
         android:id="@+id/np_playing_song_container"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="12dp"
+        android:layout_marginTop="1dp"
         android:background="?android:attr/selectableItemBackground"
         android:orientation="vertical"
-        android:paddingTop="8dp"
-        android:paddingBottom="8dp">
+        android:paddingTop="1dp"
+        android:paddingBottom="1dp">
 
         <TextView
             android:id="@+id/np_song"
@@ -72,7 +72,7 @@
             android:marqueeRepeatLimit="marquee_forever"
             android:paddingStart="16dp"
             android:paddingEnd="16dp"
-            android:paddingBottom="4dp"
+            android:paddingBottom="1dp"
             android:scrollHorizontally="true"
             android:singleLine="true"
             android:textAlignment="textStart"
