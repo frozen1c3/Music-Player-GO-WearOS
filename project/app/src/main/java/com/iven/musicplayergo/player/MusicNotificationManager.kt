@@ -99,7 +99,12 @@ class MusicNotificationManager(private val playerService: PlayerService) {
             mNotificationBuilder.setOngoing(mMediaPlayerHolder.isPlaying)
             updatePlayPauseAction()
             with(mNotificationManagerCompat) {
-                notify(GoConstants.NOTIFICATION_ID, mNotificationBuilder.build())
+                try{
+                    notify(GoConstants.NOTIFICATION_ID, mNotificationBuilder.build())
+                }
+                catch(a: SecurityException){
+                    //TODO handle it
+                }
             }
         }
     }
@@ -181,7 +186,13 @@ class MusicNotificationManager(private val playerService: PlayerService) {
                 .bigText(playerService.getString(R.string.error_fs_not_allowed)))
             .priority = NotificationCompat.PRIORITY_DEFAULT
         with(NotificationManagerCompat.from(playerService)) {
-            notify(GoConstants.NOTIFICATION_ERROR_ID, notificationBuilder.build())
+            try{
+                notify(GoConstants.NOTIFICATION_ERROR_ID, notificationBuilder.build())
+            }
+            catch(a: SecurityException){
+                //TODO handle it
+            }
+
         }
     }
 
