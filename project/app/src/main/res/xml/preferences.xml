@@ -99,7 +99,7 @@
         app:title="@string/category_general">
 
         <SwitchPreferenceCompat
-            app:defaultValue="false"
+            app:defaultValue="true"
             app:key="@string/covers_pref"
             app:title="@string/covers_pref_title" />
 

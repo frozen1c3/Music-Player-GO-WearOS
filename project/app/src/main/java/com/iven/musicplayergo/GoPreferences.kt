@@ -85,7 +85,7 @@ class GoPreferences(context: Context) {
         set(value) = mPrefs.edit { putString("on_list_ended_pref", value) }
 
     var isCovers: Boolean
-        get() = mPrefs.getBoolean("covers_pref", false)
+        get() = mPrefs.getBoolean("covers_pref", true)
         set(value) = mPrefs.edit { putBoolean("covers_pref", value) }
 
     var songsVisualization
