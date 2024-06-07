@@ -44,6 +44,3 @@ Maybe someone else finds it useful as well, so here it is.
 How to install:
 - Download the apk from release (its actually only the debug apk and not a proper release)
 - Sideload it to your watch using adb. For sideloading from Android i recommend GeminiMan)
-
-
-The following content of the readme is unchanged from the original!
