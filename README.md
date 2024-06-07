@@ -43,6 +43,10 @@ Maybe someone else finds it useful as well, so here it is.
 - Sideload it to your watch using adb. For sideloading from Android, i recommend GeminiMan: https://play.google.com/store/apps/details?id=com.geminiman.wearosmanager&hl=en_US
 - Transfer music to your phone using LocalSend - also required to be sideloaded via adb: https://f-droid.org/de/packages/org.localsend.localsend_app/
 - Manage your music files (sideload via adb): https://f-droid.org/de/packages/com.martinmimigames.simplefileexplorer/
+- Volume control:
+  The volume control of the app seems to be an own one. With it you do NOT control the overall system sound volume, but only the player volume.
+  So you might set your system volume to maximum, so that you have full control in the app. Otherwise you can only make it more quiet and not louder.
+  System volume can be set by the included media control. To access it, start any song and switch to main menu. Once there hit the little icon, that indicates that music is playing. It opens the default media control, which allows to set the system wide volume.
 
 # How to build (for non Android/Wear OS developers)
 - Download Android Studio: https://developer.android.com/studio
