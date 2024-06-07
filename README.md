@@ -41,6 +41,7 @@ I took only very few hours and removed / reordered a few UI components.
 
 Maybe someone else finds it useful as well, so here it is.
 
-How to install:
+How to use:
 - Download the apk from release (its actually only the debug apk and not a proper release)
 - Sideload it to your watch using adb. For sideloading from Android i recommend GeminiMan)
+- Transfer music to your phone using https://f-droid.org/de/packages/org.localsend.localsend_app/
