@@ -97,7 +97,7 @@ class GoPreferences(context: Context) {
         set(value) = mPrefs.edit { putInt("sorting_artists_pref", value) }
 
     var foldersSorting
-        get() = mPrefs.getInt("sorting_folder_details_pref", GoConstants.DEFAULT_SORTING)
+        get() = mPrefs.getInt("sorting_folder_details_pref", GoConstants.DESCENDING_SORTING)
         set(value) = mPrefs.edit { putInt("sorting_folder_details_pref", value) }
 
     var albumsSorting
